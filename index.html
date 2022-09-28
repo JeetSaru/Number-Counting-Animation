@@ -1,0 +1,96 @@
+<!-- 
+Number Counting Animation | Counter Up Animation | HTML CSS & JavaScript
+
+Code written by:
+👨🏻‍⚕️ Coding Design (Jeet Saru)
+
+> You can do whatever you want with the code. However if you love my content, you can **SUBSCRIBED** my YouTube Channel.
+
+🌎link: www.youtube.com/codingdesign  
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Counting Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="counter-heading">
+            <h1>Number Counting Animation</h1>
+        </header>
+        <div class="counters">
+            <div class="counter-wrapper">
+                <span class="counter-icon">👨‍👩‍👧‍👧</span>
+                <div class="counter-info">
+                    <h1 class="counter" data-count="15000000">0</h1>
+                    <p>Monthly Visitors</p>
+                </div>
+            </div>
+            <div class="counter-wrapper">
+                <span class="counter-icon">💼</span>
+                <div class="counter-info">
+                    <h1 class="counter" data-count="2200">0</h1>
+                    <p>Total Projects</p>
+                </div>
+            </div>
+            <div class="counter-wrapper">
+                <span class="counter-icon">👨‍👧‍👧</span>
+                <div class="counter-info">
+                    <h1 class="counter" data-count="12000000">0</h1>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const counters = document.querySelectorAll(".counter");
+
+        counters.forEach(counter => {
+            let initial_count = 0;
+            const final_count = counter.dataset.count;
+            // console.log(final_count);
+
+            let  counting = setInterval(updateCounting, 1);
+
+           function updateCounting() {
+
+                if (initial_count < 1000) {
+                    initial_count += 5;
+                    counter.innerText = initial_count;
+                }
+
+                if (initial_count >= 1000) {
+                    initial_count += 100;
+                    counter.innerText = (initial_count / 1000).toFixed(1) + 'K+';
+                }
+
+                if (initial_count >= 10000) {
+                    initial_count += 5000;
+                }
+
+                if (initial_count >= 1000000) {
+                    initial_count += 500000;
+                    counter.innerText = (initial_count / 1000000).toFixed(1) + 'M+';
+                }
+
+                if (initial_count >= final_count) {
+                    clearInterval(counting);
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

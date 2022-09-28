@@ -1,0 +1,108 @@
+/*
+Number Counting Animation | Counter Up Animation | HTML CSS & JavaScript
+
+Code written by:
+👨🏻‍⚕️ Coding Design (Jeet Saru)
+
+> You can do whatever you want with the code. However if you love my content, you can **SUBSCRIBED** my YouTube Channel.
+
+🌎link: www.youtube.com/codingdesign 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header.counter-heading {
+    width: 80vw;
+    height: 35vh;
+    background: linear-gradient(45deg, gold, orangered);
+    border-radius: 1rem;
+    text-align: center;
+    margin-bottom: 1.4rem;
+    padding: 0 .5rem;
+    
+    display: grid;
+    place-items: center;
+    box-shadow: 0 .2rem .2rem #0006;
+
+    
+    transition: .3s ease-in-out;
+}
+
+header h1 {
+    font: 700 2.8rem sans-serif;
+}
+
+header:hover,
+.counter-wrapper:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    filter: saturate(300%);
+    box-shadow: 0 .2rem .2rem #0006;
+}
+
+.counters {
+    width: 80vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counter-wrapper {
+    width: 32%;
+    height: 9rem;
+    
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: .3s ease-in-out;
+    box-shadow: 0 .2rem .2rem #0006;
+
+}
+
+.counter-wrapper:nth-child(1) {
+    background: linear-gradient(45deg, pink, crimson);
+}
+
+.counter-wrapper:nth-child(2) {
+    background: linear-gradient(45deg, cyan, blue);
+}
+
+.counter-wrapper:nth-child(3) {
+    background: linear-gradient(45deg, mediumspringgreen, green);
+}
+
+.counter-icon {
+    font-size: 2.5rem;
+}
+
+.counter-info {
+    color: #fff;
+    text-shadow: 1px 1px 1px #0007;
+}
+
+.counter-info h1.counter {
+    font: normal 2.8rem sans-serif;
+}
+
+.counter-info p {
+    font: normal 1.1rem sans-serif;
+    margin-top: .4rem;
+}
+
